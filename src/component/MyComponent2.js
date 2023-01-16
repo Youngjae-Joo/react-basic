@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import '.././App.css'
 
-const MyComponent2 =()=>{
+const MyComponent2 =({name})=>{
 
     return(
         <Fragment>
@@ -11,6 +11,7 @@ const MyComponent2 =()=>{
                 <p style={{color:'aqua', backgroundColor:'teal'}}>분할사용을 통해 필요하면 복사, 또는 각주처리가 가능</p>
             </div>
             <input type="text" placeholder="혼자쓰는태그는 닫아주기"/>
+            프롭스값:{name}
         </Fragment>
     )
 
