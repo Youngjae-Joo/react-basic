@@ -16,9 +16,9 @@ const IterationComponentQ2 = () => {
         { id: 7, type: 'HTML', teacher: 'coding404' },
     ];
     const [copy, setCopy] = useState(data);
-    const copyLi = copy.map(item => <li key={item.id}>{item.type}-{item.teacher}</li>)
+    const copyLi = copy.map(item => <li key={item.id}>{item.type}-{item.teacher}</li>);
 
-    const [lis, setLis] = useState(copyLi)
+    const [lis, setLis] = useState(copyLi);
 
     //3. 셀렉트태그가 체인지되면, 이벤트객체를 활용해서 선택된 값만 필터링해서 보여주면 됩니다.
     const handleChange = (e) => {

@@ -26,7 +26,7 @@ const IterationComponent2 = () => {
     const handleChange = e => setData(e.target.value);
     
     //4. 추가하기 버튼 클릭시 input의 값을 list의 마지막에 추가
-    const handleClick = e => {
+    const handleClick = () => {
         let obj = { id: list[list.length - 1].id + 1, topic: data }//list의 마지막 객체에 접근해서 그 아이디가 가진 값에 +1을 해준다.
         //list.push(obj); //불가. state를 직접 변경하면 안됨. 어차피 const라 안됨. 
         setList(list.concat(obj)); //원본 list를 수정하지 않고 list에 obj가 합쳐진 새로운 list반환하여 set으로 저장. state변경

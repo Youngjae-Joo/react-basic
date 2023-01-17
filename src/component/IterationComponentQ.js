@@ -11,7 +11,7 @@
     <img src={"/img/img1.png"} alt="제목" width="100"/>도 가능
     간단하고 자주 쓰는 이미지면 public폴더에 만들면 좋다.
 */
-
+//import img2 from './../img/img2.png';
 import { useState } from "react";
 
 const IterationComponentQ = () => {
