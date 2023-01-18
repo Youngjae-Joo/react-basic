@@ -28,11 +28,22 @@ const HookEffect = () => {
     */
 
     //useEffect(함수,[state]) - 특정값이 렌더링 될때만 실행됩니다. 처음 mount된 이후에도 한번 실행됩니다.
-    
+    /*
     useEffect(()=>{
         console.log(`age or name이 변경될 때 실행됩니다`)
     },[age, name])
-    
+    */
+
+   useEffect(()=>{
+    console.log("name이 변경될 때 실행됩니다.")
+    //컴포넌트가 unmount될 때 render됩니다.
+    return ()=>{
+        console.log(`unmount됩니다`)//렌더링이 그려지면, 기존화면은 지워집니다.
+        console.log(`update전 값:${name}`)//state는 직전값이 나옵니다.
+    }
+   },[name]);
+
+   //★★useEffect는 여러개여도 됩니다.★
 
     return (
         <>
